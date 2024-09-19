@@ -1,0 +1,18 @@
+<div class="card my-5 ">
+  <h3 class="card-header">Login</h3>
+  <div class="card-body py-5">
+
+    @if(message != ''){
+      <div class="alert alert-danger">
+        <h6>{{message}}</h6>
+      </div>
+    }
+
+    <form (ngSubmit)="login()">
+      <input [(ngModel)]="username" placeholder="Username" name="username" required class="form-control my-3"/>
+      <input [(ngModel)]="password" type="password" placeholder="Password" name="password" class="form-control mb-3" required />
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+
+  </div>
+</div>

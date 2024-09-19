@@ -1,0 +1,12 @@
+<div>
+  <h3>Create Group</h3>
+  <input [(ngModel)]="groupName" placeholder="Group Name" />
+  <button (click)="createGroup()">Create Group</button>
+
+  <h3>Create Channel</h3>
+  <select [(ngModel)]="selectedGroupId">
+    <option *ngFor="let group of groups" [value]="group.id">{{ group.name }}</option>
+  </select>
+  <input [(ngModel)]="channelName" placeholder="Channel Name" />
+  <button (click)="createChannel()">Create Channel</button>
+</div>
